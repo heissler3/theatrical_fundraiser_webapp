@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="lookup">
+  <div class="title">{{ ttitle }}</div>
+  <div class="container">
+    <p>Type the first few letters of the donor name</p>
+    <form action="" method="POST">
+      <div class="input-wrapper">
+        <div class="field-6"><input type="text" name="donorname" class="fullnamefield" id="dname" list="existing_names" autofocus></div>
+        <div class="field-12"><input type="submit" class="bigredbutton" value="Lookup"></div>
+        <datalist id="existing_names">
+        {% for opt in tname_possibilities %}
+          <option value="{{ opt }}"></option>
+        {% endfor %}
+        </datalist>
+      </div>
+    </form>
+  </div>
+</main>
+{% endblock %}

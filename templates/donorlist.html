@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="donor-list">
+  <div class="title">{{ ttitle }}</div>
+  <div class="container">
+    <table class="donors-list" id="list-of-donors">
+      <thead class="donors-list"><tr>
+        <th>Donor Name</th>
+        <th>Donor Alias</th>
+        <th>Contact Email</th>
+        <th>Pledge Amount</th>
+      </tr></thead>
+      {% for donor in tdonors %}
+      <tr>
+        <td>{{ donor.firstname }} {{ donor.lastname }}</td>
+        <td>{%if donor.alias%}"{{ donor.alias }}"{%endif%}</td>
+        <td>{{ donor.email }}</td>
+        <td>{%if donor.pledge%}{{ donor.pledge }}{%endif%}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</main>
+{% endblock %}

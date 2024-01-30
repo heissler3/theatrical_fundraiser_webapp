@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head>
+<title>{{ttitle}}</title>
+<link rel="stylesheet" type="text/css" href="/static/assets/css/tfastyle.css">
+</head>
+<body>
+  <section id="header1"><nav id="nav"><ul class="navbar">
+  {% for (text, link) in [
+    ("Home", url_for('home')),
+    ("Contact Information", url_for('create')),
+    ("Donor Lookup", url_for('find')),
+    ("List Donors", url_for('donorlist')),
+    ("Take Pledges", url_for('pledge')),
+    ("Chart", url_for('chart')), ] %}
+  <li {%if tpage==link%}class="active"{%endif%}><a href="{{ link }}">{{text}}</a></li>
+  {% endfor %}
+  </ul></nav></section>
+  {% block content %}
+  {% endblock %}
+<script src="/static/assets/js/tfascript.js" defer></script>
+</body>

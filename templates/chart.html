@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="chart">
+  <div class="title">{{ ttitle }}</div>
+  <div class="container">
+    <div id="pledge-totals"><h1>$0</h1></div>
+    <canvas id="donations_by_show">
+    </canvas>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script type='text/javascript'>
+  Chart.defaults.font.size = 24;
+  Chart.defaults.font.weight = "bold";
+  let playData = JSON.parse({{ tstartingjson|tojson }});
+</script>
+{% endblock %}

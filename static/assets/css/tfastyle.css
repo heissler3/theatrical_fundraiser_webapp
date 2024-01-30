@@ -1,0 +1,110 @@
+/* stylesheet for theatrical_fundraiser_webapp */
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+  body { color: #919499; font-family: "Source Sans 3", sans-serif; font-weight: 400; font-size: 14pt; line-height:1.75em; letter-spacing: 0.025em; margin: 0;}
+
+  #header1 { height: 10em; display: flex; margin-bottom: 0; align-items: center; justify-content: center; position: relative; padding: 0; margin: 0;
+      background: url("/static/assets/img/banner.jpg") center center; background-size: cover;
+      background-origin: padding-box; background-clip: content-box; background-repeat: repeat; }
+  #header1::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("/static/assets/img/overlay.png"); }
+
+  #nav { position: absolute; display: block; top: 2.5em; left: 0; width: 100%; text-align: center; margin-bottom: 0; }
+  #nav > ul { display: inline-block; border-radius: 0.35em; box-shadow: inset 0px 0px 1px 1px #ffffff3f; margin: 0 0 2em 0; padding: 0 1.5em 0 1.5em; }
+  #nav > ul > li { display: inline-block; text-align: center; padding: 0 1.5em 0 1.5em; }
+  #nav > ul > li > a { display: block; color: #ffffffbf; text-transform: uppercase; text-decoration: none;
+      font-size: 0.7em; letter-spacing: 0.25em; height: 5em; line-height: 5em; outline: 0 }
+  #nav > ul > li.active > a { color: #fff; font-weight: 600; }
+
+  main { background: #fff; position: relative; padding: 6em 0 9em 0; margin: 0 0 4em 0; display: block; }
+  main[id='chart'] { padding: 1.75em 0 9em 0; }
+
+  div.title { color: #484d55; display: block; position: absolute; top: -3.25em; left: 50%; width: 25em; height: 3.25em;
+      margin-bottom: -3.25em; margin-left: -12.5em; padding-top: 0.5em;
+      background-color: #fff; background-image: url("/static/assets/img/overlay.png"); background-size: auto;
+      background-repeat: repeat; background-position-x: 0%; background-position-y: 0%; background-attachment: scroll;
+      background-origin: padding-box; background-clip: border-box;
+      text-align: center; text-transform: uppercase; font-weight: 700; letter-spacing: 0.25em; font-size: 0.9em; line-height: 3.25em; }
+  .title::before { content: ''; position: absolute; bottom: -30px; left: -35px; width: 35px; height: 38px;
+      background: url("/static/assets/img/shadow.png") }
+  .title::after { content: ''; position: absolute; bottom: -30px; right: -35px; width: 35px; height: 38px;
+      background: url("/static/assets/img/shadow.png"); transform: scaleX(-1.0); }
+
+  .container { margin: 0 auto; max-width: 67%; width: 68em; }
+  #chart .container { max-width: 67%; width: auto; padding: 0; position: relative; left: -8%;}
+
+  #home h1 { text-align: center; font-size: 2.2em; color: #555; margin: 0; padding: 0; }
+  .welcome-logo { display: flex; justify-content: center; }
+  .welcome-logo > img { opacity: 75%; max-width: 80%; height: auto; }
+
+  #pledge-totals { display: flex; justify-content: center; margin-top: 12px; margin-bottom: 12px; position: relative; left: 8%; }
+  #pledge-totals > h1 { color: #303030; font-size: 3em; margin-top: .7em; margin-bottom: 0;}
+
+  p { margin-bottom: 2em; }
+  #lookup p {margin-left: 25%; padding-left: 25px; }
+
+  .input-wrapper { display: flex; flex-wrap: wrap; box-sizing: border-box; align-items: stretch; margin: -25px 0 0 -25px;}
+  .input-wrapper > * { padding: 25px 0 0 25px; box-sizing: border-box; }
+  #lookup .input-wrapper { margin-left: 25%; }
+
+  .field-6 { width: 50%; }
+  .field-12 {width: 100%; }
+  form input[type="text"], form input[type="email"] { font-size: 14pt; line-height: 1em; display: block; border: 0; border-radius: 0.35em;
+      background: #eee; box-shadow: inset 0px 0px 1px 0px #a0a1a7; width: 100%; padding: 0.75em 1em; box-sizing: inherit; }
+  select { font-size: 14pt; line-height: 1em; display: block; border: 0; border-radius: 0.35em; margin-bottom: 1.2em;
+      background: #eee; box-shadow: inset 0px 0px 1px 0px #a0a1a7; width: 100%; padding: 0.75em 1em; box-sizing: inherit; }
+
+  .interformtext { color: #333; font-weight: 800; width: 100%; margin: 0; position: relative; left: 12em;  }
+
+	button, input[type="button"],	input[type="submit"],	input[type="reset"], .bigredbutton
+    { display: inline-block; padding: 0 2.25em; min-width: 12em; height: 4em; border-radius: 0.35em; border: 0; cursor: pointer; outline: 0;
+      background-color:#e97770; background-image: url("/static/assets/img/overlay.png"); background-repeat: repeat; color: #fff;
+	    font-size: .9em; font-weight: 700;	letter-spacing: 0.25em; line-height: 4em;	text-decoration: none; text-align: center; text-transform: uppercase;
+	    -moz-transition: all .25s ease-in-out; -webkit-transition: all .25s ease-in-out;	-ms-transition: all .25s ease-in-out;	transition: all .25s ease-in-out;
+      &:hover { background-color: #f98780; } }
+
+  .donor-review h2 { margin-bottom: 0 }
+  .donor-review p { margin: 0 ; }
+  #assign_button { color: #666 ; background: lightcyan; border-radius: 0.35em; padding: 0 2.25em; margin-bottom: 32px; min-width: 12em; height: 4em;
+      font-size: .9em; text-align: center; font-weight: 700; letter-spacing: 0.25em; line-height: 4em; visibility: hidden; }
+
+  #character_name { width: 67%; }
+
+  form ::-webkit-input-placeholder { color: #555 !important; font-style: italic; line-height: 1.35em; }
+  form :-moz-placeholder { color: #555 !important; font-style: italic; }
+  form ::-moz-placeholder { color: #555 !important; font-style: italic; }
+
+  div.tiers { display: inline-flex; flex-direction: column; margin: 0 0 2em 2em; width: 16.67%; float: left;}
+
+  .tiers > div { height: 2em; font-weight: 900; font-size: 2em; text-align: center; color: rgba(255, 255, 255, .5);
+            margin: 10px; padding: .7em 0; box-sizing: border-box; background-size: 200% auto; 
+            border: 0px black dotted; border-radius: $border-rounded; border-radius: 0.35em;
+            box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08); transition: 0.5s;
+            &:hover { background-position: right center; } }
+
+  .tiers .active-tier { width: 100%; color: white; font-size: 2.2em; }
+
+  .tiers #d10k { background-image: linear-gradient(to right, #1971BB 0%, #353590 50%, #1971BB 100%); }
+  .tiers #d5k { background-image: linear-gradient(to right, #353391 0%, #C51188 50%, #353391 100%); }
+  .tiers #d2-5k { background-image: linear-gradient(to right, #95238D 0%, #ED1287 50%, #95238D 100%); }
+  .tiers #d1k { background-image: linear-gradient(to right, #EE362F 0%, #F08B2B 50%, #EE362F 100%); }
+  .tiers #d500 { background-image: linear-gradient(to right, #F28C2C 0%, #FFE72E 50%, #F28C2C 100%); }
+  .tiers #d250 { background-image: linear-gradient(to right, #F7CB2C 0%, #B8D333 50%, #F7CB2C 100%); }
+  .tiers #d100 { background-image: linear-gradient(to right, #B9D435 0%, #5DB943 50%, #B9D435 100%); }
+
+  div.pledges { display: inline-flex; width: 20%; float: right; }
+  div.pledges > * { border: 1px dotted olivedrab; }
+  .add-pledge { padding: 180px 0 0 80px; }
+
+  table.donors-list { border: 1px solid #ccc; border-collapse: collapse; margin:0; padding:0; width: 100%; }
+
+  thead.donors-list { font-weight: normal; font-size: 1.2em; }
+  thead.donors-list th { width: 16em; text-align: left; padding-left: 3em }
+  thead.donors-list th:nth-child(4) { width: 8em; text-align: right; }
+
+  table.donors-list * {color: #444; font-size: 1em; }
+  table.donors-list tr:nth-child(odd) { background-color: #f8f8f8 }
+  table.donors-list tr:nth-child(even) { background-color: #e8e8e8 }
+  table.donors-list td { text-align:left; padding-left: 3em; 
+    &:hover { cursor: pointer; } }
+  table.donors-list td:nth-child(4) { text-align: right; font-weight: bold; padding-right: 1.5em; }

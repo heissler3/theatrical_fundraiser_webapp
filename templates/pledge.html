@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="pledge">
+  <div class="title">{{ ttitle }}</div>
+  <div class="tiers">
+    <div id="d10k">$10,000</div>
+    <div id="d5k">$5,000</div>
+    <div id="d2-5k">$2,500</div>
+    <div id="d1k">$1,000</div>
+    <div id="d500">$500</div>
+    <div id="d250">$250</div>
+    <div id="d100">$100</div>
+  </div>
+  <div class="container">
+    <div class="add-pledge">
+      <form method="POST"><div class="input-wrapper">
+        <div class="field-6"><input type="text" name="donor-alias" list="characters_in_attendence" placeholder="Character"></div>
+        <div class="field-6"><input type="text" name="donation-amount" id="donation-entry" placeholder="Amount"></div>
+        <p class="interformtext"> <-- OR --> </p>
+        <div class="field-6"><input type="text" name="firstname" placeholder="First Name"></div>
+        <div class="field-6"><input type="text" name="lastname" placeholder="Last Name"></div>
+        <div class="field-12"><input type="email" name="email" placeholder="Valid EMail Address"></div>
+        <div class="field-12"><input type="submit" class="bigredbutton" value="Commit"></div>
+        <input type="hidden" name="current-tier" value="{{ tcurrenttier }}" id="current-tier">
+        <datalist id="characters_in_attendence">
+          {% for char in tcharlist %}
+          <option>{{char}}</option>
+          {% endfor %}
+        </datalist>
+      </div></form>
+    </div>
+  </div>
+  <div class="pledges">
+  </div>
+</main>
+{% endblock %}

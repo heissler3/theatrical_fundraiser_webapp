@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="review">
+  <div class="title">{{ ttitle }}</div>
+  <div class="container">
+    <section class="donor-review"> 
+      <div class="donorinfo">
+        <h2>{{ tfullname }}</h2>
+        <p>{{ tdonor['email'] }}</p>
+        {% if tdonor['street_addr'] %}
+          <p>{{ tdonor['street_addr'] }}</p>
+        {% endif %}
+        {% if tdonor['city'] %}
+          <p>{{tdonor['city']}}, {{tdonor['state']}}  {{tdonor['zipcode']}}</p>
+        {% endif %}
+      </div>
+    </section>
+    <br>
+    <button id="assign_button">Assign a Character Name</button>
+  </div>
+</main>
+<script type="text/javascript">
+  const availableCharacters = JSON.parse({{tavailchars|tojson}});
+  let showAssignButton = {{ tenableassign }};
+</script>
+{% endblock %}

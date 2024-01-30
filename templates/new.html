@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="create">
+  <div class="title">{{ ttitle }}</div>
+  <div class="container">
+    <p>Please enter your contact information so that Starship Troupers can collect your donation after the event.</p>
+    <form action="" method="POST"><div class="input-wrapper">
+      <div class="field-6"><input type="text" name="givenname" id="fname" placeholder="First Name (required)" required></div>
+      <div class="field-6"><input type="text" name="surname" id="lname" placeholder="Last Name (required)" required></div>
+      <div class="field-12"><input type="email" name="email" id="email" placeholder="Email (required)" required></div>
+      <div class="field-12"><input type="text" name="street" id="street" placeholder="Mailing Address"></div>
+      <div class="field-12"><input type="text" name="city" id="city" placeholder="City"></div>
+      <div class="field-6"><input type="text" name="state" id="state" placeholder="State"></div>
+      <div class="field-6"><input type="text" name="zip" id="zip" placeholder="ZipCode"></div>
+      <div class="field-12"><input type="submit" class="bigredbutton" value="Enter"></div>
+    </div></form>
+  </div>
+</main>
+{% endblock %}
