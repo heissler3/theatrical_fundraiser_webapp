@@ -7,7 +7,7 @@ The intended gimmick was that the attendees would be assigned a character name u
 
 The server side of the app is written in python using Flask.  [Chart.js](https://www.chartjs.org) is used for the progress page.
 
-Styling was done by **Kathryn Murrell**, working from template **"Escape Velocity"** from [HTML5 UP](https://html5up.net/).  Coding by **Henry Eissler** (except for the Chart.js).
+Styling was done by [**KathrynUX**](https://github.com/kathrynUX), working from template **"Escape Velocity"** from [HTML5 UP](https://html5up.net/).  Coding by **Henry Eissler** (except for the Chart.js).
 
 #### <u>To-Do:</u>
 + Error Checking on New Donor entries
