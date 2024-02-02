@@ -76,21 +76,21 @@
 
   div.tiers { display: inline-flex; flex-direction: column; margin: 0 0 2em 2em; width: 16.67%; float: left;}
 
-  .tiers > div { height: 2em; font-weight: 900; font-size: 2em; text-align: center; color: rgba(255, 255, 255, .5);
-            margin: 10px; padding: .7em 0; box-sizing: border-box; background-size: 200% auto; 
-            border: 0px black dotted; border-radius: $border-rounded; border-radius: 0.35em;
-            box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08); transition: 0.5s;
-            &:hover { background-position: right center; } }
+  .tiers > div { height: 2em; width: 88%; font-weight: 900; font-size: 2em; text-align: center; color: rgba(255, 255, 255, .5);
+            margin: 10px; padding: .7em 0; box-sizing: border-box; background-size: 200% auto; opacity: 67%;
+            border: 0px; border-radius: $border-rounded; border-radius: 0.35em;
+            box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+            &:hover { cursor: pointer; } }
 
-  .tiers .active-tier { width: 100%; color: white; font-size: 2.2em; }
+  .tiers .active-tier { width: 100%; color: white; font-size: 2.2em; opacity: 100% !important; }
 
-  .tiers #d10k { background-image: linear-gradient(to right, #1971BB 0%, #353590 50%, #1971BB 100%); }
-  .tiers #d5k { background-image: linear-gradient(to right, #353391 0%, #C51188 50%, #353391 100%); }
-  .tiers #d2-5k { background-image: linear-gradient(to right, #95238D 0%, #ED1287 50%, #95238D 100%); }
-  .tiers #d1k { background-image: linear-gradient(to right, #EE362F 0%, #F08B2B 50%, #EE362F 100%); }
-  .tiers #d500 { background-image: linear-gradient(to right, #F28C2C 0%, #FFE72E 50%, #F28C2C 100%); }
-  .tiers #d250 { background-image: linear-gradient(to right, #F7CB2C 0%, #B8D333 50%, #F7CB2C 100%); }
-  .tiers #d100 { background-image: linear-gradient(to right, #B9D435 0%, #5DB943 50%, #B9D435 100%); }
+  .tiers #d10k { background-color: #1971BB; }
+  .tiers #d5k { background-color: #353391; }
+  .tiers #d2-5k { background-color: #95238D; }
+  .tiers #d1k { background-color: #EE362F; }
+  .tiers #d500 { background-color: #F28C2C; }
+  .tiers #d250 { background-color: #F7CB2C; }
+  .tiers #d100 { background-color: #B9D435; }
 
   div.pledges { display: inline-flex; width: 20%; float: right; }
   div.pledges > * { border: 1px dotted olivedrab; }

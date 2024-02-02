@@ -17,4 +17,6 @@ Styling was done by [**KathrynUX**](https://github.com/kathrynUX), working from 
     + Print badge ("Hello, my name is...")
 + Reflect Play name in Donor Review
 + Replace randomize color palette with fixed, styled palette
++ Move pledge tier selectors to horizontal bar & de-colorize
++ Reflect pledge entries on pledge page (with a growing list on the right?)
 + Error checking everywhere
